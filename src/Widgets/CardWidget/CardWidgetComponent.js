@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as Scrivito from 'scrivito';
-import { kebabCase } from "lodash-es";
+
 
 Scrivito.provideComponent('CardWidget', ({ widget }) =>{
     // const sectionStyle = {};
@@ -33,10 +33,6 @@ Scrivito.provideComponent('CardWidget', ({ widget }) =>{
 
         <article>
             {/* //===========HEADLINE============= */}
-            <span
-            className="headline-widget--anchor"
-            id={kebabCase(widget.get("headline"))}
-            ></span>
                 <Scrivito.ContentTag
                 tag={"h3"}
                 content={widget}
@@ -62,6 +58,7 @@ Scrivito.provideComponent('CardWidget', ({ widget }) =>{
     
     )}
     else{
+    {/* //===========Overlay============= */}
     return(
         <div className="overlay">
         <a className='cardLink'href="#" onclick="return false;">
@@ -74,10 +71,6 @@ Scrivito.provideComponent('CardWidget', ({ widget }) =>{
         />
             <article className="articleOverlay">
             {/* //===========HEADLINE============= */}
-            <span
-            className="headline-widget--anchor"
-            id={kebabCase(widget.get("headline"))}
-            ></span>
                 <Scrivito.ContentTag
                 tag={"h3"}
                 content={widget}
